@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import {connect} from 'react-redux'
 
 type Props = {};
-export default class DetailPage extends Component<Props> {
+class DetailPage extends Component<Props> {
+  componentDidMount(): void {
+    console.log(this.props.nav)
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -25,3 +30,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
 });
+
+const mapState = state => ({
+  nav: state.nav
+})
+export default connect(mapState)(DetailPage)
