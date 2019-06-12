@@ -8,7 +8,6 @@ import {connect} from 'react-redux'
 type Props = {};
 class HomePage extends Component<Props> {
   componentDidMount(): void {
-    console.log(this.props.nav)
     BackHandler.addEventListener("hardwareBackPress",this.onBackPress)
   }
 

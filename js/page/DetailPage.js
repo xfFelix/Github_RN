@@ -4,9 +4,6 @@ import {connect} from 'react-redux'
 
 type Props = {};
 class DetailPage extends Component<Props> {
-  componentDidMount(): void {
-    console.log(this.props.nav)
-  }
 
   render() {
     return (
